@@ -29,8 +29,7 @@ function Page() {
                     personajes.map(personaje => (
                         <li key={Personaje.id} className="py-20 text-center">
                             <img src={Personaje.image} alt="foto" className="mx-auto" />
-                            <b>{Personaje.name}:</b> {Personaje.price} € (descuento {Personaje.discountPercentage}% )
-                            =&gt; {(Personaje.price * (1 - Personaje.discountPercentage / 100)).toFixed(2)} €
+                            <b>{Personaje.name}:</b> 
                         </li>
                     ))
 

@@ -70,13 +70,9 @@
                         const title = document.createElement('b');
                         title.textContent = `${personaje.name}: `;
 
-                        const price = document.createElement('span');
-                        const discountedPrice = (personaje.price * (1 - personaje.discountPercentage / 100)).toFixed(2);
-                        price.textContent = `${personaje.price} € (descuento ${personaje.discountPercentage}%) => ${discountedPrice} €`;
 
-                        li.appendChild(img);
-                        li.appendChild(title);
-                        li.appendChild(price);
+                        li.appendChild(image);
+                        li.appendChild(name);
 
                         personajeList.appendChild(li);
                     });
