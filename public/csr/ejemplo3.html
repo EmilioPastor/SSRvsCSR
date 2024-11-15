@@ -58,7 +58,7 @@
                     const res = await fetch('https://rickandmortyapi.com/api/character');
                     const data = await res.json();
 
-                    data.personajes.forEach(personaje => {
+                    data.results.forEach(personaje => {
                         const li = document.createElement('li');
                         li.className = 'py-20 text-center';
 
@@ -68,11 +68,14 @@
                         img.className = 'mx-auto';
 
                         const title = document.createElement('b');
-                        title.textContent = `${personaje.name}: `;
+                        title.textContent = personaje.name;
 
+                        const created = document.createElement('span');
+                        created.textContent = personaje.created;
 
-                        li.appendChild(image);
-                        li.appendChild(name);
+                        li.appendChild(img);
+                        li.appendChild(title);
+                        li.appendChild(created);
 
                         personajeList.appendChild(li);
                     });

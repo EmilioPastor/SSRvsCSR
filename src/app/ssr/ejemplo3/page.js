@@ -1,7 +1,6 @@
 export const dynamic = 'force-dynamic';
 
-
-async function fetchProducts() {
+async function fetchPersonajes() {
   const res = await fetch('https://rickandmortyapi.com/api/character');
   if (!res.ok) {
     throw new Error('Failed to fetch products');
@@ -20,14 +19,8 @@ export default async function Page() {
       <ul>
         {personajes.map(personaje => (
           <li key={personaje.id} className="py-20 text-center">
-            <Image
-              src={personaje.image}
-              alt={personaje.name}
-              width={200}
-              height={200}
-              className="mx-auto"
-            />
-            <b>{personaje.name}:</b> 
+            <img src={personaje.image} alt="foto" className="mx-auto" />
+            <b>{personaje.name}:</b> {personaje.created}
           </li>
         ))}
       </ul>

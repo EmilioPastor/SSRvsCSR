@@ -27,9 +27,9 @@ function Page() {
             <ul>
                 {
                     personajes.map(personaje => (
-                        <li key={Personaje.id} className="py-20 text-center">
-                            <img src={Personaje.image} alt="foto" className="mx-auto" />
-                            <b>{Personaje.name}:</b> 
+                        <li key={personaje.id} className="py-20 text-center">
+                            <img src={personaje.image} alt="foto" className="mx-auto" />
+                            <b>{personaje.name}:</b> {personaje.created}
                         </li>
                     ))
 
